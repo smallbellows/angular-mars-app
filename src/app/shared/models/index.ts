@@ -1,6 +1,6 @@
 
 
-interface IAlien {
+export interface IAlien {
     
     type: string,
     submitted_by: string,
@@ -9,7 +9,7 @@ interface IAlien {
    
 }
     
-interface IOccupation {
+export interface IOccupation {
     
    name: string,
    id: string,
@@ -17,7 +17,7 @@ interface IOccupation {
     
 }
 
-class Colonist {
+export class Colonist {
    
    constructor (
         public name: string,
@@ -27,7 +27,7 @@ class Colonist {
     
 }
 
-class Encounter {
+export class Encounter {
     
      constructor (
         public atype: string,
