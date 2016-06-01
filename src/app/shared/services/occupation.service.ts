@@ -20,9 +20,9 @@ export class OccupationService {
   }
   
   private handleError(error: any) {
-  console.log('There was an error', error);
-  return Promise.reject(error.message || error);
-}
+    console.log('There was an error', error);
+    return Promise.reject(error.message || error);
+  }
 }
 
 
