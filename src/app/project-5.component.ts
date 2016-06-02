@@ -10,7 +10,6 @@ import { ReportComponent } from './+report';
   moduleId: module.id,
   selector: 'project-5-app',
   templateUrl: 'project-5.component.html',
-  styleUrls: [''],
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS]
 })

@@ -1,31 +1,41 @@
-<h1>
-  Register
-</h1>
+<div class="app-container">
+  <header class="form-header">
+    <h1>Register</h1>
+  </header>
 
-<form>
-  <fieldset>
-    <label for="name">
-      <span>Name:</span>
-      <input type="text" placeholder="Name" id="name">
-    </label>
-    <label for="age">
-      <span>Age:</span>
-      <input type="text" placeholder="Age" id="age">
-    </label>
-    <label for="occupation">
-      <span>Select Occupation:</span>
-      <select name="occupation" id="occupation">
-        <option value="job1">Job 1</option>
-        <option value="job2">Job 2</option>
-        <option value="job3">Job 3</option>
-        <option value="job4">Job 4</option>
-        <option value="job5">Job 5</option>
-      </select>
-    </label>
-  </fieldset>
-  <fieldset>
-    <button>
-      Check In
-    </button>
-  </fieldset>
-</form>
+  <form>
+    
+    <fieldset>
+      <label for="name">
+        <span>Name:</span>
+        <input type="text" placeholder="Name" id="name">
+      </label>
+      
+      <label for="age">
+        <span>Age:</span>
+        <input type="text" placeholder="Age" id="age">
+      </label>
+      
+      <label for="occupation">
+        <span>Select Occupation:</span>
+        <select name="occupation" id="occupation">
+          <option value="job1">Job 1</option>
+          <option value="job2">Job 2</option>
+          <option value="job3">Job 3</option>
+          <option value="job4">Job 4</option>
+          <option value="job5">Job 5</option>
+        </select>
+      </label>
+      
+    </fieldset>
+    
+    <fieldset>
+      <button>
+        Check In
+      </button>
+      <a [routerLink] ="['/encounters']">Encounters</a>
+    </fieldset>
+    
+  </form>
+
+</div>

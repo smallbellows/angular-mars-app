@@ -1,19 +1,33 @@
+<div class="app-container">
+  <header class="form-header">
+    <h1>Report an Encounter</h1>
+    <h3>Safety on Mars is your responsibility</h3>
+  </header>
 
-<header>
-  <h1>Report an Encounter</h1>
-  <h2>Safety on Mars is your responsibility</h2>
-</header>
-
-<form>
-  <fieldset>
-    <label for="alien">
-      <span></span>
-      <select name="alien" id="alien">
-        
-      </select>
-    </label>
-  </fieldset>
-  <fieldset>
-    <button>Submit Report</button>
-  </fieldset>
-</form>
+  <form>
+    <fieldset>
+      <label for="alien">
+        <span>Alien Species:</span>
+        <select name="alien" id="alien">
+          <option value class="placeholder">Select alien type</option>
+          <option value="alien1">Alien 1</option>
+          <option value="alien2">Alien 2</option>
+          <option value="alien3">Alien 3</option>
+          <option value="alien4">Alien 4</option>
+          <option value="alien5">Alien 5</option>
+        </select>
+      </label>
+      <label for="action">
+        <span>Action taken:</span>
+        <textarea name="action" id="action">Action taken:
+        </textarea>
+       </label>
+       
+      
+    </fieldset>
+    
+    <fieldset>
+      <button>Submit Report</button>
+    </fieldset>
+  </form>
+</div>

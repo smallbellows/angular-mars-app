@@ -5,7 +5,7 @@ import { Router, Routes, ROUTER_DIRECTIVES , ROUTER_PROVIDERS} from '@angular/ro
   moduleId: module.id,
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['../styles/style.css'],
+  styleUrls: ['home.component.css'],
   directives: [ROUTER_DIRECTIVES]
 })
 export class HomeComponent implements OnInit {
