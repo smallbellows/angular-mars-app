@@ -9,61 +9,14 @@
 
   <div class="encounter">
     <ul>
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
+      <li *ngFor="let enc of encounters">
+       <p>
+         {{enc.date}} - {{enc.atype}}
+       </p>
+       <p>
+         {{enc.atype}}
+       </p>
       </li>
-      
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
-      </li>
-      
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
-      </li>
-      
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
-      </li>
-      
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
-      </li>
-      
-      <li>
-        <p>
-          2016-05-31 - Ectomorph
-        </p>
-        <p>
-          Made a new friend!
-        </p>
-      </li>
-      
-      
     </ul>
   </div>
 

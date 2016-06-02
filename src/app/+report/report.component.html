@@ -4,26 +4,23 @@
     <h3>Safety on Mars is your responsibility</h3>
   </header>
 
-  <form>
+  <form #encounterForm="ngForm" (ngSubmit)="onSubmit()">
     <fieldset>
+      
       <label for="alien">
         <span>Alien Species:</span>
-        <select name="alien" id="alien">
-          <option value class="placeholder">Select alien type</option>
-          <option value="alien1">Alien 1</option>
-          <option value="alien2">Alien 2</option>
-          <option value="alien3">Alien 3</option>
-          <option value="alien4">Alien 4</option>
-          <option value="alien5">Alien 5</option>
+        <select ngControl="alien" [(ngModel)]="encounter.atype" name="alien" id="alien">
+          <option>Select alien type</option>
+           <option *ngFor="let alien of aliens" value=alien.id>{{alien.type}}</option>
         </select>
       </label>
-      <label for="action">
+      
+      <label ngControl="action" for="action" [(ngModel)]="encounter.action">
         <span>Action taken:</span>
         <textarea name="action" id="action">Action taken:
         </textarea>
        </label>
-       
-      
+         
     </fieldset>
     
     <fieldset>
