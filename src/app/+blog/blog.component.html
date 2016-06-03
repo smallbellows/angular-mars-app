@@ -5,10 +5,14 @@
   </header>
   
   <div class="blog-posts">
-    <article *ngFor="let post of blogPosts">
-      <h2><a href="{{post.link}}">{{post.title}}</a></h2>
-      <p>{{post.excerpt | stripTags }}</p>
-    </article>
+    <ul>
+      <li *ngFor="let post of blogPosts">
+        <h2><a href="{{post.link}}">{{post.title}}</a></h2>
+        <p>{{post.excerpt | stripTags }}</p>
+        
+        <a class="read-more" href="{{post.link}}">Read More</a>
+      </li>
+    </ul>
   </div>
   
   <footer>

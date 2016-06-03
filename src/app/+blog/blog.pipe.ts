@@ -9,6 +9,7 @@ export class StripHTMLTags implements PipeTransform {
         post = post.replace(/<(?:.|)*?>/gm, '');
         post = post.replace('[&hellip;]', '[...]');
         post = post.replace('&#8217;', "'");
+        
         return post;
     }
 }

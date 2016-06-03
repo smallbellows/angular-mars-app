@@ -1,0 +1,44 @@
+header{
+    height: 20vh;
+    position: fixed;
+    top: 0;
+}
+
+div.blog-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 20vh;
+    height: 70vh;
+    overflow: scroll;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+   margin-left: 1rem;
+   margin-right: 1rem; 
+}
+
+.read-more {
+    font-size: 0.9em;
+    padding: 1%;
+    border: 1px solid black;
+    margin-left: 3rem;
+    
+    &:hover {
+        background: black;
+        color: white;
+    }
+}
+
+footer {
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+}
+
