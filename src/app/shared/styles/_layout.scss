@@ -56,13 +56,12 @@ header.form-header {
 }
 
 form {
-    height: 80vh;
-    width: 100%;
-    
+    height: 75vh;
+    width: 100%;  
 }
 
 fieldset {
-    height: 50%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -87,11 +86,6 @@ label {
         background: transparent;
         border-bottom: 1px solid black;
     }
-    
-    select {
-        width: 100%;
-        margin-top: 5vh;
-    }
 }
 
 fieldset button {
@@ -106,10 +100,5 @@ fieldset button {
 label[for='action'] {
     height: 25vh
 }
-textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
-}
+
 
