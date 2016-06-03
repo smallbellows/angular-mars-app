@@ -1,5 +1,18 @@
 <div class="app-container">
   
-  <h1>Blog</h1>
+  <header>
+    <h1> Mars Colony Blog</h1>
+  </header>
+  
+  <div class="blog-posts">
+    <article *ngFor="let post of blogPosts">
+      <h2><a href="{{post.link}}">{{post.title}}</a></h2>
+      <p>{{post.excerpt}}</p>
+    </article>
+  </div>
+  
+  <footer>
+    <p>Participate in our community of explorers! <a href="">Report your alien sightings</a></p>
+  </footer>
   
 </div>

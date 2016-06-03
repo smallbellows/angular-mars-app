@@ -18,8 +18,8 @@ export interface IOccupation {
 }
 
 export interface IBlogPost {
-    title?: string,
-    excerpt?: string,
+    title?,
+    excerpt?,
     link?: string
 }
 
