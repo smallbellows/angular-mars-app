@@ -10,21 +10,22 @@
       <label for="alien">
         <span>Alien Species:</span>
         <select ngControl="alien" [(ngModel)]="encounter.atype" name="alien" id="alien">
-          <option>Select alien type</option>
-           <option *ngFor="let alien of aliens" value=alien.id>{{alien.type}}</option>
+          <option [value]=NO_ALIEN_SELECTED>Select alien type</option>
+           <option *ngFor="let alien of aliens" [value]=alien.type>{{alien.type}}</option>
         </select>
       </label>
       
-      <label ngControl="action" for="action" [(ngModel)]="encounter.action">
+      <label for="action" >
         <span>Action taken:</span>
-        <textarea name="action" id="action">Action taken:
+        <textarea ngControl="action" [(ngModel)]="encounter.action" name="action" id="action" placeholder="Action taken">
+          {{encounter.action}}
         </textarea>
        </label>
          
     </fieldset>
     
     <fieldset>
-      <button>Submit Report</button>
+      <button type="submit" [disabled]="noAlien || noAction">Submit Report</button>
     </fieldset>
   </form>
 </div>

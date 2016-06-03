@@ -16,24 +16,56 @@ export class ReportComponent implements OnInit {
   
   public encounter: Encounter;
   public aliens: IAlien[];
+  public NO_ALIEN_SELECTED: string;
+  public date: string;
+
   
   constructor(
     private router: Router,
-    private encounterService: AlienService,
+    private encounterService: EncounterService,
     private alienService: AlienService
-  ) {}
+  ) {
+    this.NO_ALIEN_SELECTED = '(none)';
+  }
 
   ngOnInit() {
     
-    this.encounter = new Encounter(null, null, null, '1');
+    this.encounter = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, '1');
     
     this.alienService.getAliens().then(( result )=>{
       this.aliens = result;
     })
   }
   
+  private setDate(date) {
+    
+    this.date = date.getFullYear().toString() + '-';
+    
+    this.date += date.getMonth() + 1 < 10 ? '0' : '';
+    this.date += (date.getMonth() + 1).toString();
+    
+    this.date += '-' + date.getDate().toString();
+    
+  }
+  
   public onSubmit() {
     
+    let today = new Date;
+    this.setDate(today);
+    
+    console.log(this.date);
+    
+     this.encounterService.postEncounter(this.encounter)
+                          .then( result => this.router.navigate(['/encounters']));
+                              
+  }
+  
+  get noAlien(): boolean {
+    return this.encounter.atype === this.NO_ALIEN_SELECTED;
+  }
+  
+  get noAction(): boolean {
+    return this.encounter.action === '';
   }
 
 }
