@@ -15,10 +15,13 @@ import { StripHTMLTags } from './blog.pipe';
 export class BlogComponent implements OnInit {
   
   public blogPosts: IBlogPost[];
+  public status: string;
 
   constructor(
     private blogPostService: BlogPostService
-  ) {}
+  ) {
+    this.status = 'loading';
+  }
 
   ngOnInit() {
     this.blogPostService.getBlogPosts().then( (result) => {
@@ -30,6 +33,8 @@ export class BlogComponent implements OnInit {
        post.excerpt = post.excerpt.rendered;
        
       });
+      
+      this.status = 'active';
     });
   }
 

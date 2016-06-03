@@ -16,9 +16,13 @@
         <input ngControl="age" [(ngModel)]="colonist.age" type="number" placeholder="Age" id="age">
       </label>
       
-      <label for="occupation">
+      <label for="occupation" [ngSwitch]='status'>
+        
         <span>Select Occupation:</span>
-        <select ngControl="job" [(ngModel)]="colonist.job_id" name="occupation" id="occupation">
+        <div *ngSwitchWhen="'loading'">
+          <p>loading...</p>
+        </div>
+        <select *ngSwitchWhen="'active'" ngControl="job" [(ngModel)]="colonist.job_id" name="occupation" id="occupation">
           <option [value]=NO_OCCUPATION_SELECTED>Select Occupation</option>
           <option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
         </select>

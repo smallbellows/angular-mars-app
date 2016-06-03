@@ -3,9 +3,14 @@
     <h1>Report an Encounter</h1>
     <h3>Safety on Mars is your responsibility</h3>
   </header>
-
-  <form #encounterForm="ngForm" (ngSubmit)="onSubmit()">
-    <fieldset>
+  
+  <form #encounterForm="ngForm" (ngSubmit)="onSubmit()" [ngSwitch]='status'>
+    
+    <div *ngSwitchWhen="'loading'">
+      loading...
+    
+    </div>
+    <fieldset *ngSwitchWhen="'active'">
       
       <label for="alien">
         <span>Alien Species:</span>

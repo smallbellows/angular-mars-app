@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   public occupations: IOccupation[];
   public colonist: Colonist;
   public NO_OCCUPATION_SELECTED: string;
+  public status: string
   
   constructor(
     private router: Router,
@@ -25,6 +26,7 @@ export class RegisterComponent implements OnInit {
     private occupationService: OccupationService
   ) { 
     this.NO_OCCUPATION_SELECTED = '(none)';
+    this.status = 'loading';
   }
 
   ngOnInit() {
@@ -33,6 +35,7 @@ export class RegisterComponent implements OnInit {
     
     this.occupationService.getJobs().then(( result )=>{
       this.occupations = result;
+      this.status = 'active';
     });
   }
  

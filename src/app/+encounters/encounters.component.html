@@ -7,8 +7,11 @@
     </h2>
   </header>
 
-  <div class="encounter">
-    <ul>
+  <div class="encounter" [ngSwitch]='status'>
+    <div *ngSwitchWhen="'loading'">
+      loading...
+    </div>
+    <ul *ngSwitchWhen="'active'">
       <li *ngFor="let enc of encounters">
        <p>
          {{enc.date}} - {{enc.atype}}

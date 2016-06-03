@@ -20,6 +20,7 @@ export class ReportComponent implements OnInit {
   public NO_ALIEN_SELECTED: string;
   public date: string;
   public colonistID: string;
+  public status: string;
 
   
   constructor(
@@ -28,6 +29,7 @@ export class ReportComponent implements OnInit {
     private alienService: AlienService
   ) {
     this.NO_ALIEN_SELECTED = '(none)';
+    this.status = 'loading';
   }
 
   ngOnInit() {
@@ -41,6 +43,7 @@ export class ReportComponent implements OnInit {
     
     this.alienService.getAliens().then(( result )=>{
       this.aliens = result;
+      this.status = 'active';
     })
   }
   

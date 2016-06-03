@@ -4,8 +4,12 @@
     <h1> Mars Colony Blog</h1>
   </header>
   
-  <div class="blog-posts">
-    <ul>
+  <div class="blog-posts" [ngSwitch]='status'>
+    
+    <div *ngSwitchWhen="'loading'">
+      loading...
+    </div>
+    <ul *ngSwitchWhen="'active'">
       <li *ngFor="let post of blogPosts">
         <h2><a href="{{post.link}}">{{post.title}}</a></h2>
         <p>{{post.excerpt | stripTags }}</p>
