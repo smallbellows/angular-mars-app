@@ -9,6 +9,7 @@ import { EncounterService, AlienService } from '../shared/services';
   moduleId: module.id,
   selector: 'app-report',
   templateUrl: 'report.component.html',
+  styleUrls: ['report.component.css'],
   providers: [EncounterService, AlienService]
 
 })
@@ -50,6 +51,7 @@ export class ReportComponent implements OnInit {
     this.date += date.getMonth() + 1 < 10 ? '0' : '';
     this.date += (date.getMonth() + 1).toString();
     
+    this.date += date.getDate() < 10 ? '0' : '';
     this.date += '-' + date.getDate().toString();
     
   }
