@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes, ROUTER_DIRECTIVES , ROUTER_PROVIDERS} from '@angular/router';
 
+
 import { HomeComponent } from './+home';
 import { RegisterComponent } from './+register';
 import { EncountersComponent } from './+encounters';
 import { ReportComponent } from './+report';
+import { BlogComponent } from './+blog';
 
 @Component({
   moduleId: module.id,
@@ -17,7 +19,8 @@ import { ReportComponent } from './+report';
   {path: '/home', component: HomeComponent},
   {path: '/register', component: RegisterComponent},
   {path: '/encounters', component: EncountersComponent},
-  {path: '/report', component: ReportComponent}
+  {path: '/report', component: ReportComponent},
+  {path: '/blog', component: BlogComponent}
 ])
 export class Project5AppComponent implements OnInit {
   

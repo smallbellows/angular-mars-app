@@ -35,7 +35,7 @@ export class ReportComponent implements OnInit {
     let today = new Date;
     this.setDate(today);
     
-    this.colonistID = localStorage.getItem('colonistID');
+    this.colonistID = sessionStorage.getItem('colonistID');
     
     this.encounter = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, this.colonistID);
     
