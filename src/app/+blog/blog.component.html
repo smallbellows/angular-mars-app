@@ -7,7 +7,7 @@
   <div class="blog-posts">
     <article *ngFor="let post of blogPosts">
       <h2><a href="{{post.link}}">{{post.title}}</a></h2>
-      <p>{{post.excerpt}}</p>
+      <p>{{post.excerpt | stripTags }}</p>
     </article>
   </div>
   
