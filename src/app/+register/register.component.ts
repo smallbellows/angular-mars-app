@@ -10,6 +10,7 @@ import { ColonistService, OccupationService } from '../shared/services';
   moduleId: module.id,
   selector: 'app-register',
   templateUrl: 'register.component.html',
+  styleUrls: ['register.component.css'],
   providers: [ColonistService, OccupationService]
 })
 export class RegisterComponent implements OnInit {
