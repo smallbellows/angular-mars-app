@@ -17,6 +17,12 @@ export interface IOccupation {
     
 }
 
+export interface IBlogPost {
+    title?: string,
+    excerpt?: string,
+    link?: string
+}
+
 export class Colonist {
    
    constructor (
