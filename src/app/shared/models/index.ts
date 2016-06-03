@@ -22,7 +22,8 @@ export class Colonist {
    constructor (
         public name: string,
         public age: string,
-        public job_id: string
+        public job_id: string,
+        public id?: string
     ) {}
     
 }

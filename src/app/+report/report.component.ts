@@ -18,6 +18,7 @@ export class ReportComponent implements OnInit {
   public aliens: IAlien[];
   public NO_ALIEN_SELECTED: string;
   public date: string;
+  public colonistID: string;
 
   
   constructor(
@@ -30,7 +31,12 @@ export class ReportComponent implements OnInit {
 
   ngOnInit() {
     
-    this.encounter = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, '1');
+    let today = new Date;
+    this.setDate(today);
+    
+    this.colonistID = localStorage.getItem('colonistID');
+    
+    this.encounter = new Encounter(this.NO_ALIEN_SELECTED, this.date, null, this.colonistID);
     
     this.alienService.getAliens().then(( result )=>{
       this.aliens = result;
@@ -49,11 +55,6 @@ export class ReportComponent implements OnInit {
   }
   
   public onSubmit() {
-    
-    let today = new Date;
-    this.setDate(today);
-    
-    console.log(this.date);
     
      this.encounterService.postEncounter(this.encounter)
                           .then( result => this.router.navigate(['/encounters']));

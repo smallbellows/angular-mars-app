@@ -17,6 +17,8 @@ export class RegisterComponent implements OnInit {
   public occupations: IOccupation[];
   public colonist: Colonist;
   public NO_OCCUPATION_SELECTED: string;
+  private colonistID: string;
+
   
   constructor(
     private router: Router,
@@ -38,7 +40,29 @@ export class RegisterComponent implements OnInit {
  onSubmit(): void {
    
    this.colonistService.createColonist(this.colonist)
-                       .then( colonist => this.router.navigate(['/encounters']));
+                       .then( (result) => {
+                         this.router.navigate(['/encounters']);
+                         this.colonistID = result.id;
+                         
+  //  put the colonist into user's local storage, so that their ID can be recorded 
+  //  in the encounter component
+   
+    var storage;
+    var fail;
+    var uid;
+    try {
+      uid = new Date;
+      (storage = window.localStorage).setItem(uid, uid);
+      fail = storage.getItem(uid) != uid;
+      storage.removeItem(uid);
+      fail && (storage = false);
+    } catch (exception) {}
+    
+    if (storage) {
+      storage.setItem('colonistID', this.colonistID);
+    }
+   });
+
  }
  
  get noOccupation() : boolean {
