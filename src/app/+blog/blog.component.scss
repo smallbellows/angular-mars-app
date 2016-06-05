@@ -10,13 +10,16 @@ div.blog-posts ul {
     padding: 0;
     position: fixed;
     top: 20vh;
-    height: 70vh;
+    height: 65vh;
     overflow: scroll;
     text-align: left;
+    background: white; 
+    color: black;
 }
 
 h2 {
     text-align: center;
+    color: black;
 }
 
 p {
@@ -29,6 +32,7 @@ p {
     padding: 1%;
     border: 1px solid black;
     margin-left: 3rem;
+    color: black;
     
     &:hover {
         background: black;
@@ -37,8 +41,13 @@ p {
 }
 
 footer {
-    height: 10vh;
+    padding: 1em;
+    height: 15vh;
     position: fixed;
     bottom: 0;
+    
+    p   {
+        margin-bottom: 0;
+    }
 }
 
