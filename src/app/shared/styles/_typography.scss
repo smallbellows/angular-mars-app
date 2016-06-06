@@ -1,10 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Yantramanav:400,100);
-
 @import 'mixins'; // for media queries for font sizes
 
 
 $color__font: #CACACA;
-
+$base_space-unit: 1.5rem;
 
 html {
     font-size: 12px;
