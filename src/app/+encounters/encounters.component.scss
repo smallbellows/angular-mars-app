@@ -1,3 +1,12 @@
+header, footer {
+    height: 22vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
 div.encounter{
     text-align: left;
     width: 95%;
@@ -13,7 +22,27 @@ div.encounter{
     }
 }
 
+div.loading {
+    position: fixed;
+    top: 20vh;
+    height: 60vh;
+    width: 100%;
+}
+
+ul {
+
+       position: fixed;
+       top: 20vh;
+       height: 60vh;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       overflow: scroll;  
+}
+
 footer {
+    position: fixed;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

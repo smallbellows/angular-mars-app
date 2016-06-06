@@ -73,5 +73,6 @@ export class ReportComponent implements OnInit {
   get noAction(): boolean {
     return this.encounter.action === '';
   }
+ 
 
 }

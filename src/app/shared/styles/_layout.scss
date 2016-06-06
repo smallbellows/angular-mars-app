@@ -17,39 +17,7 @@ header, footer, div {
     flex-direction: column;
 }
 
-header.home, footer.home {
-    height: 30vh;
-}
-
-div.home {
-    min-height: 40vh;     
-}
-
-header.encounter, footer.encounter {
-    height: 22vh;
-}
-
-header.encounter {
-    position: fixed;
-    top: 0;
-}
-
-footer.encounter {
-    position: fixed;
-    bottom: 0;
-}
-
-div.encounter ul {
-
-       position: fixed;
-       top: 20vh;
-       height: 60vh;
-       width: 100%;
-       margin: 0;
-       padding: 0;
-       overflow: scroll;
-    
-}
+/* Form Styles */
 
 header.form-header {
     height: 20vh;
