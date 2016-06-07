@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Project5</title>
+  <title>Mars Colony App - Report Your Sightings!</title>
   <base href="/">
   <link rel="stylesheet" href="./app/shared/styles/style.css" />
 
@@ -20,6 +20,18 @@
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
+    </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyArsQfsuxbqO6T7lnEFmLelcluTt90QlnY",
+        authDomain: "mars-angular2.firebaseapp.com",
+        databaseURL: "https://mars-angular2.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
     </script>
 
 </body>
