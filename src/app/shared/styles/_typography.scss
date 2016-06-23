@@ -10,11 +10,11 @@ html {
     color: $color__font;
     font-family: 'Yantramanav', sans-serif;
     font-weight: 100;
-    
+
     @include medium {
         font-size: 3vw;
     }
-    
+
     @include bigenough {
         font-size: 18px;
     }
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.4em;
-   
+
 }
 
 h2 {
@@ -45,24 +45,22 @@ p {
     margin-bottom: $base_space-unit;
 }
 
-input::-webkit-input-placeholder, .placeholder, textarea {
-    font-size: 1.2em;
+input::-webkit-input-placeholder, .placeholder, textarea, select {
+    font-size: 1.5em;
     color: red;
 }
 
 button, a {
     font-size: 1.56em;
     text-transform: uppercase;
-  
+
 }
 
 a {
     color: $color__font;
     text-decoration: none;
-    
+
     &:hover {
         color: darken($color__font, 10%);
     }
 }
-
-
